@@ -3,7 +3,7 @@ Information
     *arg Required argument
     /arg Optional arg
     () Argument info
-      (s:i) Subargument count
+      (s:int) Subargument count
       ($t) Database entry accepted
 List
     echo;*txt(s:1,$t) - echoes *txt
@@ -19,3 +19,6 @@ List
     db_add;*key(s:1);*value(s:1) - adds a key:value pair to the script database (key:*key,value:*value)
     db_del;*key(s:1) - removes the *key key:value pair
     db_get;/key(s:1) - gets the /key key:value pair (if /key is skipped, it will give the whole database)
+    type;*args(s:1+,$t) - gets the type of every element of *args
+    settypestatic;*type(s:1);*arg(s:1,$t) - gets *arg as *type
+    settypedb;*type(s:1);*key(s:1) - changes the type of *key to *type

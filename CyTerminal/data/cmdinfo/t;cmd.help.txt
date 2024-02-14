@@ -21,6 +21,7 @@ List
     m.exponentiate <num1> <num2> (num...) - exponentiates num1, num2 and num3 [.ex]
     m.random <min> <max> - returns a random integer between min and max [.ran]
     m.round <number> <tnrst> - returns number rounded to the nearest tnrst - [.rnd]
+    m.deldecimalpoint <num> - Removes the decimal point from num - [.ddp]
     d,var.set <datatype> <variable> <newval> - gives variable a new 
     value (newval) as datatype which can be str (string) or int (integer) or flt (float) or lst (list)
     or something else a new value - [.st]
@@ -36,3 +37,12 @@ List
     d,file.write <file> <contents> - overwrites file - [.w]
     d,file.delete <file> - deletes file - [.d]
     d,file.readtovar <variable> <file> - makes the value of variable become file - [.rtv]
+    l.not <r> - performs logical not on r [.n]
+    l.and <l> <r> - performs logical and on l and r [.a]
+    l.nand <l> <r> - performs logical nand on l and r [.na]
+    l.or <l> <r> - performs logical or on l and r [.o]
+    l.nor <l> <r> - performs logical nor on l and r [.no]
+    l.xor <l> <r> - performs logical xor on l and r [.x]
+    l.xnor <l> <r> - performs logical xnor on l and r [.nx]
+    l.is <l> <r> - checks if l and r are the same (boolean) [.i]
+    l.nis <l> <r> - checks if l and r are not the same (boolean) [.ni]

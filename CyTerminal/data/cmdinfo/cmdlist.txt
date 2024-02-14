@@ -4,7 +4,7 @@ Information
     (oa) Optional argument
     [prfx] Prefix used for categorization
 List
-    General - [g]
+    General - [g.]
         g.help (category/command/subcommand/type) - shows a list of commands if without arguments and shows info about
         the specified category or command or subcommand or type if there is an argument - [.hlp]
         g.exit - exits the program - [.ext]
@@ -28,6 +28,7 @@ List
             m.ex.square <num> - squares num
         m.random <min> <max> - returns a random integer between min and max [.ran]
         m.round <number> <tnrst> - returns number rounded to the nearest tnrst - [.rnd]
+        m.deldecimalpoint <num> - Removes the decimal point from num - [.ddp]
     Data - [d.]
         d,var - [,var]
             d,var.set <datatype> <variable> <newval> - gives variable a new 
@@ -46,3 +47,13 @@ List
             d,file.write <file> <contents> - overwrites file - [.w]
             d,file.delete <file> - deletes file - [.d]
             d,file.readtovar <variable> <file> - makes the value of variable become file - [.rtv]
+    Logic - [l.]
+        l.not <r> - performs logical not on r [.n]
+        l.and <l> <r> - performs logical and on l and r [.a]
+        l.nand <l> <r> - performs logical nand on l and r [.na]
+        l.or <l> <r> - performs logical or on l and r [.o]
+        l.nor <l> <r> - performs logical nor on l and r [.no]
+        l.xor <l> <r> - performs logical xor on l and r [.x]
+        l.xnor <l> <r> - performs logical xnor on l and r [.nx]
+        l.is <l> <r> - checks if l and r are the same (boolean) [.i]
+        l.nis <l> <r> - checks if l and r are not the same (boolean) [.ni]

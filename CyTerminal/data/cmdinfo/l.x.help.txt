@@ -1,0 +1,11 @@
+l.xor (Command)
+Info
+    prefix: x
+    argument count: 2 required
+    category: Logic
+Syntax
+    l.xor <l> <r>
+Function
+    Performs logical xor
+Subcommands
+    /none

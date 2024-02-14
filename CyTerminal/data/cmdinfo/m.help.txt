@@ -16,3 +16,4 @@ Command list
         m.ex.square <num> - squares num
     m.random <min> <max> - returns a random integer between min and max [.ran]
     m.round <number> <tnrst> - returns number rounded to the nearest tnrst - [.rnd]
+    m.deldecimalpoint <num> - Removes the decimal point from num - [.ddp]

@@ -9,3 +9,4 @@ List
     General - A category with commands that perform general functions like exiting the program - [g]
     Math - A category with commands that perform math related functions like addition
     Data - A category with commands that perform data related functions like setting variables
+    Logic - A category with commands that perform logical functions like OR

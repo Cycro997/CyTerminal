@@ -1,38 +1,16 @@
 print("Welcome! Type g.help for a list of commands.")
 print("Note: command must be lowercase")
 import time
-import random
 import os
 from functools import reduce
-file=open("data\\extracode\\CTscript\\CTscript.py")
-exec(compile(file.read(),"test",'exec'))
+import sys
+sys.path.append("data/extracode/CTScript")
+sys.path.append("data/extracode/")
+import CTScript as cts
+import PyLib.maths as m #Due to the python module math, I have to add an s 
+import PyLib.logic as l
 exccount=1
-#Functions
-def multiply(a, b, *c):
-    try:
-        return int(a) * int(b)
-    except:
-        return "Atleast 1 argument is not a number"
-def subtract(a, b, *c):
-    try:
-        return int(a) - int(b)
-    except ValueError:
-        return "Atleast 1 argument is not a number"
-def divide(a, b, *c):
-    try:
-        return int(a) / int(b)
-    except ValueError:
-        return "Atleast 1 argument is not a number"
-def exponentiate(a, b, *c):
-    try:
-        return int(a) ** int(b)
-    except ValueError:
-        return "Atleast 1 argument is not a number"
-def randomn(a,b):
-    print(random.randrange(a,b))
-def specialround(n,d):
-    return round(n/d)*d
-
+ctsdb={}
 0
 #Commands
 while 1:
@@ -67,6 +45,9 @@ while 1:
                 print(file.read())
             elif inpsplit[1]=="d" or inpsplit[1] == "data":
                 file = open("data\\cmdinfo\\d.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l" or inpsplit[1] == "logic":
+                file = open("data\\cmdinfo\\l.help.txt")
                 print(file.read())
             #Subcategories
             elif inpsplit[1] == "d,var":
@@ -154,6 +135,36 @@ while 1:
             elif inpsplit[1]=="m.round" or inpsplit[1] == "m.rnd":
                 file = open("data\\cmdinfo\\m.rnd.help.txt")
                 print(file.read())
+            elif inpsplit[1]=="m.deldecimalpoint" or inpsplit[1] == "m.ddp":
+                file = open("data\\cmdinfo\\m.ddp.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.not" or inpsplit[1] == "l.n":
+                file = open("data\\cmdinfo\\l.n.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.and" or inpsplit[1] == "l.a":
+                file = open("data\\cmdinfo\\l.a.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.nand" or inpsplit[1] == "l.na":
+                file = open("data\\cmdinfo\\l.na.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.or" or inpsplit[1] == "l.o":
+                file = open("data\\cmdinfo\\l.o.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.nor" or inpsplit[1] == "l.no":
+                file = open("data\\cmdinfo\\l.no.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.xor" or inpsplit[1] == "l.x":
+                file = open("data\\cmdinfo\\l.x.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.xnor" or inpsplit[1] == "l.nx":
+                file = open("data\\cmdinfo\\l.nx.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.is" or inpsplit[1] == "l.i":
+                file = open("data\\cmdinfo\\l.i.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="l.nis" or inpsplit[1] == "l.ni":
+                file = open("data\\cmdinfo\\l.ni.help.txt")
+                print(file.read())
             #Subcommands
             elif inpsplit[1]=="m.ad.succeed" :
                 file = open("data\\cmdinfo\\m.ad.succeed.help.txt")
@@ -171,8 +182,6 @@ while 1:
                 file = open("data\\cmdinfo\\m.ex.square.help.txt")
                 print(file.read())
             #Invalid
-            elif inp.startswith("?"):
-                print("Argument cannot be a statement")
             else:
                 print("Invalid argument")
         else:
@@ -199,17 +208,17 @@ while 1:
             print("You need atleast 2 arguments to run this command")
     elif inpsplit[0]=="m.multiply":
         if len(inpsplit)>=3:
-           print(reduce(multiply, inpsplit[1:]))
+           print(reduce(m.multiply, inpsplit[1:]))
         else:
             print("You need atleast 2 arguments to run this command")
     elif inpsplit[0]=="m.subtract":
         if len(inpsplit)>=3:
-            print(reduce(subtract, inpsplit[1:]))
+            print(reduce(m.subtract, inpsplit[1:]))
         else:
             print("You need atleast 2 arguments to run this command")
     elif inpsplit[0]=="m.divide":
         if len(inpsplit)>=3:
-            print(reduce(divide, inpsplit[1:]))
+            print(reduce(m.divide, inpsplit[1:]))
         else:
             print("You need atleast 2 arguments to run this command")
     elif inpsplit[0]=="g.echo":
@@ -219,7 +228,7 @@ while 1:
             print("You need only 1 argument to run this command")
     elif inpsplit[0]=="m.mu.double":
         if len(inpsplit) == 2:
-            multiply(2,inpsplit[1])
+            m.multiply(2,inpsplit[1])
         else:
             print("You need 1 argument to run this command")
     elif inpsplit[0]=="g.timer":
@@ -276,17 +285,17 @@ while 1:
             print("You need 1 or 2 arguments to run this command")
     elif inpsplit[0]=="m.di.half":
         if len(inpsplit) == 2:
-            divide(inpsplit[1], 2)
+            m.divide(inpsplit[1], 2)
         else:
             print("You need 1 argument to run this command")
     elif inpsplit[0]=="m.exponentiate":
         if len(inpsplit)>=3:
-            print(reduce(exponentiate, inpsplit[1:]))
+            print(reduce(m.exponentiate, inpsplit[1:]))
         else:
             print("You need atleast 2 arguments to run this command")
     elif inpsplit[0]=="m.ex.square":
         if len(inpsplit) == 2:
-            exponentiate(inpsplit[1], 2)
+            m.exponentiate(inpsplit[1], 2)
         else:
             print("You need 1 argument to run this command")
     elif inpsplit[0]=="m.ad.succeed":
@@ -300,7 +309,7 @@ while 1:
     elif inpsplit[0]=="m.su.precede":
         if len(inpsplit) == 2:
             try:
-                subtract(int(inpsplit[1]), 1)
+                m.subtract(int(inpsplit[1]), 1)
             except ValueError:
                 print("Number must be an integer")
         else:
@@ -395,7 +404,7 @@ else:
     elif inpsplit[0]=="m.random":
         if len(inpsplit)==3:
             try:
-                randomn(int(inpsplit[1]),int(inpsplit[2]))
+                print(m.randomn(int(inpsplit[1]),int(inpsplit[2])))
             except ValueError:
                 print("Atleast 1 argument is not an integer or both arguments are identical or the minimum value is greater than the maximum value")
         else:
@@ -583,7 +592,7 @@ else:
             if len(inpsplit)==2:
                 print(round(float(inpsplit[1])))
             elif len(inpsplit)==3:
-                print(specialround(float(inpsplit[1]),float(inpsplit[2])))
+                print(m.round(float(inpsplit[1]),float(inpsplit[2])))
             else:
                 print("You need 2 or 3 arguments to run this command")
         except ValueError:
@@ -591,12 +600,93 @@ else:
     elif inpsplit[0]=="g.ctscr":
         if len(inpsplit)>=2:
             try:
-                code=compile("ctscr('%s').exec()" % (" ".join(inpsplit[1:])),"test","exec")
-                exec(code)
+               a=cts.ctscr(" ".join(inpsplit[1:]), database=ctsdb)
+               print(a.exec())
+               ctsdb=a.database
             except Exception:
                 print("An error occured")
         else:
             print("You need 1 argument to run this command")
+    elif inpsplit[0]=="m.deldecimalpoint":
+        if len(inpsplit)==2:
+            try:
+                print(int(inpsplit[1].replace(".","",1)))
+            except ValueError:
+                print("float or int only")
+        else:
+            print("You need 1 argument to run this command")
+    elif inpsplit[0]=="l.not":
+        if len(inpsplit)==2:
+            try:
+               print(l.NOT(int(inpsplit[1])))
+            except Exception:
+                print("Invalid value")
+        else:
+            print("You need 1 argument to run this command")
+    elif inpsplit[0]=="l.and":
+        if len(inpsplit)==3:
+            try:
+               print(l.AND(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.nand":
+        if len(inpsplit)==3:
+            try:
+               print(l.NAND(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.or":
+        if len(inpsplit)==3:
+            try:
+               print(l.OR(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.nor":
+        if len(inpsplit)==3:
+            try:
+               print(l.NOR(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.xor":
+        if len(inpsplit)==3:
+            try:
+               print(l.XOR(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.xnor":
+        if len(inpsplit)==3:
+            try:
+               print(l.XNOR(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.is":
+        if len(inpsplit)==3:
+            try:
+               print(l.IS(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
+    elif inpsplit[0]=="l.nis":
+        if len(inpsplit)==3:
+            try:
+               print(l.NIS(int(inpsplit[1]),int(inpsplit[2])))
+            except Exception:
+                print("Invalid values")
+        else:
+            print("You need 2 arguments to run this command")
 
     else: #If input is invalid
         if inp=="": #No command
