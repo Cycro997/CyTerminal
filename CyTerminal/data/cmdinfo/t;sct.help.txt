@@ -1,0 +1,8 @@
+Subategories (Type)
+Info
+    A command subcategory is a subcategory that contains a list of commands which perform a similar
+    function and has a parent category.
+    Categories have a set prefix which is used before the names of its commands with
+    the command name and prefix being separated by the point (.).
+List
+   d,var - For variable related commands

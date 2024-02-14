@@ -1,0 +1,11 @@
+m.random (Command)
+Info
+    prefix: ran
+    argument count: 2 required
+    category: Math
+Syntax
+    m.random <min> <max>
+Function
+    Gives a random number between 2 bounds given by the user
+Subcommands
+    /none

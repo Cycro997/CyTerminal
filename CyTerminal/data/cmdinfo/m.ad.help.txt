@@ -1,0 +1,11 @@
+m.add (Command)
+Info
+    prefix: ad
+    argument count: 2 required, 1 optional
+    category: Math
+Syntax
+    m.add <num1> <num2> (num3)
+Function
+    Adds the numbers given by the user
+Subcommands
+    m.ad.succeed <num> - gives the successor to num (integer only)
