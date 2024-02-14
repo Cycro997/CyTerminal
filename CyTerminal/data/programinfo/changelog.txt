@@ -1,6 +1,3 @@
-Version 0.3 - Changelog:
-Added infinite variable support
-m.add, m.multiply, m.subtract, m.divide and m.exponentiate now support
-infinite arguments
-Added auto type to d,var.set for freedom
-Added commands g.freeecho and m.round
+Version 0.4 - Changelog
+Added CTscript
+Added command g.ctscr

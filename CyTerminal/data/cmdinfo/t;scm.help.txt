@@ -1,4 +1,4 @@
-Commands (Type)
+Subcommands (Type)
 Info
     A subcommand is a keyword which utilizes the function of another command
     with the difference being having set arguments

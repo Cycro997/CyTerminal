@@ -14,6 +14,7 @@ List
         g.version - gives the program version - [.ver]
         g.changelog - gives the program changelog - [.chlg]
         g.freeecho <input> - says input as plain text - [.fech]
+        g.ctscr <script> - runs script as a ctscript script - [.cts]
     Math - [m.]
         m.add <num1> <num2> (num...) - adds num1, num2 and num3 - [.ad]
             m.ad.succeed <num> - gives the successor to num (integer only)

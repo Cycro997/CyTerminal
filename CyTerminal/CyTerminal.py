@@ -4,9 +4,11 @@ import time
 import random
 import os
 from functools import reduce
-var=0
+file=open("data\\extracode\\CTscript\\CTscript.py")
+exec(compile(file.read(),"test",'exec'))
+exccount=1
 #Functions
-def multiply(a, b):
+def multiply(a, b, *c):
     try:
         return int(a) * int(b)
     except:
@@ -29,16 +31,16 @@ def exponentiate(a, b, *c):
 def randomn(a,b):
     print(random.randrange(a,b))
 def specialround(n,d):
-    lv1=n/d
-    lv2=round(lv1)
-    lv3=lv2*d
-    return lv3
+    return round(n/d)*d
+
 0
 #Commands
 while 1:
+   try:
     inp=input("Enter command ")
     inpsplit=inp.split(" ")
     if inpsplit[0]=="g.help":
+       try:
         if len(inpsplit) == 1:
             file = open("data\\cmdinfo\\cmdlist.txt")
             print(file.read())
@@ -169,10 +171,14 @@ while 1:
                 file = open("data\\cmdinfo\\m.ex.square.help.txt")
                 print(file.read())
             #Invalid
+            elif inp.startswith("?"):
+                print("Argument cannot be a statement")
             else:
                 print("Invalid argument")
         else:
             print("You need from 0 to 1 arguments to run to runt this command")         
+       except FileNotFoundError:
+           print("File is missing.")
     elif inpsplit[0]=="g.exit":
         if len(inpsplit) == 1:
             exit()
@@ -582,14 +588,30 @@ else:
                 print("You need 2 or 3 arguments to run this command")
         except ValueError:
             print("Invalid arguments")
-    
-    else: #For non-commands
+    elif inpsplit[0]=="g.ctscr":
+        if len(inpsplit)>=2:
+            try:
+                code=compile("ctscr('%s').exec()" % (" ".join(inpsplit[1:])),"test","exec")
+                exec(code)
+            except Exception:
+                print("An error occured")
+        else:
+            print("You need 1 argument to run this command")
+
+    else: #If input is invalid
         if inp=="": #No command
             print("Please enter a command")
         elif "." not in inp: #No dot (meaning no prefix)
             print("Did you forget the category prefix?")
         elif inp.startswith("."): #Input starts with a dot
-            print("Did you forget the category prefix")
+            print("Did you forget the category prefix?")
         else: #Invalid
             print("Invalid command, perhaps you made a spelling error?")
+   except Exception as exception:
+        print(f"Exception: {exception} (Exception {exccount})")
+        time.sleep(1)
+        if exccount==3:
+            break
+        exccount+=1
+       
 #Code end

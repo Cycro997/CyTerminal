@@ -1,0 +1,21 @@
+CTscript keyword list
+Information
+    *arg Required argument
+    /arg Optional arg
+    () Argument info
+      (s:i) Subargument count
+      ($t) Database entry accepted
+List
+    echo;*txt(s:1,$t) - echoes *txt
+    sum;*numbers(s:2+) - gets the sum of *numbers
+    prod;*numbers(s:2+) - gets the product of *numbers
+    subtract;*numbers(s:2+) - subtracts *numbers
+    quotient;*numbers(s:2+) - gets the quotient of *numbers
+    timer;*time(s:1);/txt(s:1) - starts a *time second timer then says /txt when it ends
+    round;*numbers(s:1) - rounds *numbers
+    input;*text(s:1);*mode(s:1) - gets input with text *text and executes in *mode
+    cts_terminal;*lines(s:1) - enters terminal mode, lasts *lines lines
+    exit - exits code
+    db_add;*key(s:1);*value(s:1) - adds a key:value pair to the script database (key:*key,value:*value)
+    db_del;*key(s:1) - removes the *key key:value pair
+    db_get;/key(s:1) - gets the /key key:value pair (if /key is skipped, it will give the whole database)

@@ -13,3 +13,4 @@ Command list
     g.version - gives the program version - [.ver]
     g.changelog - gives the program changelog - [.chlg]
     g.freeecho <input> - says input as plain text - [.fech]
+    g.ctscr <script> - runs script as a ctscript script - [.cts]
