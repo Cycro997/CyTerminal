@@ -1,4 +1,4 @@
-CyTerminal 0.1
+CyTerminal 0.2
 
 Files and folders:
 Main program: program.py

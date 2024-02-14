@@ -1,1 +1,8 @@
-This is the first version, there are no changes
+Version 0.2 - Changelog:
+Added dictionary support to "d,var" commands
+Added command "d,var.adddictitem"
+Added subcategory "d,file"
+Added command "d,file.read"
+Added command "d,file.write"
+Added command "d,file.delete"
+Added command "d,file.readtovar"

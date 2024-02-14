@@ -13,3 +13,4 @@ Command list
     d,var.len <variable> - gives the number of items in variable - [.ln]
     d,var.settype <datatype> <variable> - changes the type of variable - [.stp]
     d,var.addsetitem <variable> <object> - adds object to variable - [.asi]
+    d,var.adddictitem <variable> <key> <value> - adds a dictionary item to a variable - [.adi]

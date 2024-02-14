@@ -1,3 +1,4 @@
-Version 0.1 
+Version 0.2
 Development stage: Alpha
-First version of this program!
+---------------
+Added some file handling capabilities!

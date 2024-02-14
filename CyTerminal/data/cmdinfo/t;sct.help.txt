@@ -6,3 +6,4 @@ Info
     the command name and prefix being separated by the point (.).
 List
    d,var - For variable related commands
+   d,file - For file related commands

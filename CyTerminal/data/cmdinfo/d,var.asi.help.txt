@@ -5,7 +5,7 @@ Info
     category: Data
     subcategory: var
 Syntax
-    d,var.append <variable> <object>
+    d,var.addsetitem <variable> <object>
 Function
     adds a new item given by the user to a variable also given by the user
 Subcommands

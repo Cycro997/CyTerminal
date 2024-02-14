@@ -2,6 +2,7 @@ print("Welcome! Type g.help for a list of commands.")
 print("Note: command must be lowercase")
 import time
 import random
+import os
 v1,v2,v3 = 0,0,0
 #Functions
 def add(a, b, *c): 
@@ -132,18 +133,20 @@ def getvartype(a):
         print("Invalid variable")
         lNoError=False
     if lNoError == True:
-        if type(lv1) == type("string"):
+        if type(lv1) == str:
             return "String"
-        elif type(lv1) == type(1773639):
+        elif type(lv1) == int:
             return "Integer"
-        elif type(lv1) == type(7104.7):
+        elif type(lv1) == float:
             return "Float"
-        elif type(lv1) == type(["list"]):
+        elif type(lv1) == list:
             return "List"
-        elif type(lv1) == type(("tuple",)):
+        elif type(lv1) == tuple:
             return "Tuple"
-        elif type(lv1) == type({"set"}):
+        elif type(lv1) == set:
             return "Set"
+        elif type(lv1) == dict:
+            return "Dictionary"
 #Commands
 while 1:
     inp=input("Enter command ")
@@ -180,6 +183,9 @@ while 1:
             elif inpsplit[1] == "d,var":
                 file = open("data\\cmdinfo\\d,var.help.txt")
                 print(file.read())
+            elif inpsplit[1] == "d,file":
+                file = open("data\\cmdinfo\\d,file.help.txt")
+                print(file.read())
             #Commands
             elif inpsplit[1]=="g.help" or inpsplit[1] == "g.hlp":
                 file = open("data\\cmdinfo\\g.hlp.help.txt")
@@ -207,22 +213,6 @@ while 1:
                 print(file.read())
             elif inpsplit[1]=="m.exponentiate" or inpsplit[1] == "m.ex":
                 file = open("data\\cmdinfo\\m.ex.help.txt")
-                print(file.read())
-            #Subcommands
-            elif inpsplit[1]=="m.ad.succeed" :
-                file = open("data\\cmdinfo\\m.ad.succeed.help.txt")
-                print(file.read())
-            elif inpsplit[1]=="m.mu.double" :
-                file = open("data\\cmdinfo\\m.mu.double.help.txt")
-                print(file.read())
-            elif inpsplit[1]=="m.su.precede" :
-                file = open("data\\cmdinfo\\m.su.precede.help.txt")
-                print(file.read())
-            elif inpsplit[1]=="m.di.half":
-                file = open("data\\cmdinfo\\m.di.half.help.txt")
-                print(file.read())
-            elif inpsplit[1]=="m.ex.square" :
-                file = open("data\\cmdinfo\\m.ex.square.help.txt")
                 print(file.read())
             elif inpsplit[1]=="d,var.set" or inpsplit[1] == "d,var.st":
                 file = open("data\\cmdinfo\\d,var.st.help.txt")
@@ -256,6 +246,34 @@ while 1:
                 print(file.read())
             elif inpsplit[1]=="g.changelog" or inpsplit[1] == "g.chlg":
                 file = open("data\\cmdinfo\\g.chlg.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="d,var.adddictitem" or inpsplit[1] == "d,var.adi":
+                file = open("data\\cmdinfo\\d,var.adi.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="d,file.read" or inpsplit[1] == "d,file.r":
+                file = open("data\\cmdinfo\\d,var.r.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="d,file.delete" or inpsplit[1] == "d,file.d":
+                file = open("data\\cmdinfo\\d,var.d.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="d,file.readtovar" or inpsplit[1] == "d,file.rtv":
+                file = open("data\\cmdinfo\\d,var.rtv.help.txt")
+                print(file.read())
+            #Subcommands
+            elif inpsplit[1]=="m.ad.succeed" :
+                file = open("data\\cmdinfo\\m.ad.succeed.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="m.mu.double" :
+                file = open("data\\cmdinfo\\m.mu.double.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="m.su.precede" :
+                file = open("data\\cmdinfo\\m.su.precede.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="m.di.half":
+                file = open("data\\cmdinfo\\m.di.half.help.txt")
+                print(file.read())
+            elif inpsplit[1]=="m.ex.square" :
+                file = open("data\\cmdinfo\\m.ex.square.help.txt")
                 print(file.read())
             #Invalid
             else:
@@ -427,6 +445,8 @@ while 1:
                             print("invalid value")
                     else:
                         print("invalid variable")
+                else:
+                    print("3rd argument must be 1 word long")
             elif inpsplit[1] == "flt":
                 if len(inpsplit)==4:
                     if inpsplit[2] == "v1":
@@ -451,6 +471,8 @@ while 1:
                             print("invalid value")
                     else:
                         print("invalid variable")
+                else:
+                    print("3rd argument must be 1 word long")
             elif inpsplit[1] == "set":
                 if inpsplit[2] == "v1":
                     v1=set(inpsplit[3:])
@@ -484,6 +506,28 @@ while 1:
                     v1=v2=v3=inpsplit[3:]
                 else:
                     print("invalid variable")
+            elif inpsplit[1] == "dict":
+                if len(inpsplit)>=5:
+                    if inpsplit[2] == "v1":
+                        v1={
+                            inpsplit[3] : " ".join(inpsplit[4:])
+                        }
+                    elif inpsplit[2] == "v2":
+                        v2={
+                            inpsplit[3] : " ".join(inpsplit[4:])
+                        }
+                    elif inpsplit[2] == "v3":
+                        v3={
+                            inpsplit[3] : " ".join(inpsplit[4:])
+                        }
+                    elif inpsplit[2]=="all":
+                        v1=v2=v3={
+                            inpsplit[3] : " ".join(inpsplit[4:])
+                        }
+                    else:
+                        print("invalid variable")
+                else:
+                    print("3rd argument must be atleast 2 words long")
             else:
                 print("invalid datatype")
         else:
@@ -686,7 +730,32 @@ while 1:
                     v3=set(str(v3))
                 else:
                     print("invalid variable")
-
+            elif inpsplit[1] == "dict":
+                if len(inpsplit)==4:
+                    if inpsplit[2] == "v1":
+                        try:
+                           v1=dict(v1)
+                        except ValueError:
+                            print("Cannot make the specified variable a dictionary")
+                    elif inpsplit[2] == "v2":
+                        try:
+                            v2=dict(v2)
+                        except ValueError:
+                            print("Cannot make the specified variable a dictionary")
+                    elif inpsplit[2] == "v3":
+                        try:
+                            v3=dict(v3)
+                        except ValueError:
+                            print("Cannot make the specified variable a dictionary")
+                    elif inpsplit[2]=="all":
+                        try:
+                            v1=dict(v1)
+                            v2=dict(v2)
+                            v3=dict(v3)
+                        except ValueError:
+                            print("Cannot make atleast 1 variable a dictionary")
+                    else:
+                        print("invalid variable")
             else:
                 print("invalid datatype")
         else:
@@ -718,7 +787,7 @@ while 1:
             else:
                 print("Invalid variable")
         else:
-            print("You need 1 argument to run this command")
+            print("You need 2 argument to run this command")
     elif inpsplit[0]=="g.version":
         if len(inpsplit) == 1:
             file = open("data/programinfo/version.txt")
@@ -731,6 +800,85 @@ while 1:
             print(file.read())
         else:
             print("You need 0 arguments to run this commmand")
+    elif inpsplit[0]=="d,var.adddictitem":
+        if len(inpsplit)>=4:
+            if inpsplit[1]=="v1":
+                try:
+                    v1[inpsplit[2]]=(" ".join(inpsplit[3:]))
+                except AttributeError:
+                    print("Variable is not a dictionary")
+            elif inpsplit[1]=="v2":
+                try:
+                    v2[inpsplit[2]]=(" ".join(inpsplit[3:]))
+                except AttributeError:
+                    print("Variable is not a dictionary")
+            elif inpsplit[1]=="v3":
+                try:
+                    v3[inpsplit[2]]=(" ".join(inpsplit[3:]))
+                except AttributeError:
+                    print("Variable is not a dictionary")
+            elif inpsplit[1]=="all":
+                try:
+                    v1[inpsplit[2]]=(" ".join(inpsplit[3:]))
+                    v2[inpsplit[2]]=(" ".join(inpsplit[3:]))
+                    v3[inpsplit[2]]=(" ".join(inpsplit[3:]))
+                except AttributeError:
+                    print("Atleast 1 variable is not a dictionary")
+            else:
+                print("Invalid variable")
+        else:
+            print("You need 3 arguments to run this command") 
+    elif inpsplit[0]=="d,file.read":
+        if len(inpsplit)==2:
+            try:
+                file=open("data//usermadefiles//%s" % inpsplit[1])
+                print(file.read())
+                file.close
+            except FileNotFoundError:
+                print("File %s does not exist" % inpsplit[1])
+        else:
+            print("You need only 1 argument to run this command")
+    elif inpsplit[0]=="d,file.write":
+        try:
+            if len(inpsplit)>=3:
+                file=open("data//usermadefiles//%s" % inpsplit[1], "w")
+                file.write(" ".join(inpsplit[2:]))
+                file.close()
+            else:
+                print("You need 2 arguments to run this command")
+        except FileNotFoundError:
+                print("File %s does not exist" % inpsplit[1])
+        except PermissionError:
+            print("Missing permissions or file is in use")
+    elif inpsplit[0]=="d,file.delete":
+        try:
+            if len(inpsplit)==2:
+                os.remove("data//usermadefiles//%s" % inpsplit[1])
+            else:
+                print("You need 1 argument to run this command")
+        except FileNotFoundError:
+            print("File %s does not exist" % inpsplit[1])
+        except PermissionError:
+            print("Missing permissions or file is in use")
+    elif inpsplit[0]=="d,file.readtovar":
+        if len(inpsplit)==3:
+            try:
+                file=open("data//usermadefiles//%s" % inpsplit[2])
+                if inpsplit[1]=="v1":
+                    v1=file.read()
+                elif inpsplit[1]=="v2":
+                    v2=file.read()
+                elif inpsplit[1]=="v3":
+                    v3=file.read()
+                elif inpsplit[1]=="all":
+                    v1=v2=v3=file.read()
+                else:
+                    print("Invalid variable")
+                file.close
+            except FileNotFoundError:
+                print("File %s does not exist" % inpsplit[1])
+        else:
+            print("You need 2 arguments to run this command")
 
     else: #For non-commands
         if inp=="": #No command
