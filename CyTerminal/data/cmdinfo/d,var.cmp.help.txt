@@ -5,7 +5,7 @@ Info
     category: Data
     subcategory: var
 Syntax
-    d,var.compare <variable1> <variable2> <cmpoperator>
+    d,var.compare <variable1> <variable2>
 Function
     compares 2 variables given by the user
 Subcommands

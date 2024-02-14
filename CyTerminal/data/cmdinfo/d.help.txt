@@ -4,13 +4,13 @@ Info
     This command category is for data related commands, commands from this category
     are related to data handling in some way or another like variable management
 Command list
-    d,var.set <datatype> <variable> <newval> - gives variable (which can be v1, v2, v3 or all) a new 
+    d,var.set <datatype> <variable> <newval> - gives variable a new 
     value (newval) as datatype which can be str (string) or int (integer) or flt (float) or lst (list)
     or something else a new value - [.st]
     d,var.display <variable> - displays variable - [.dsp]
     d,var.type <variable> - displays the type of variable - [.dsp]
     d,var.append <variable> <object> - adds object to variable - [.apd]
-    d,var.compare <variable1> <variable2> <cmpoperator> - compares variable1 and variable 2 - [.cmp]
+    d,var.compare <variable1> <variable2> - compares variable1 and variable 2 - [.cmp]
     d,var.len <variable> - gives the number of items in variable - [.ln]
     d,var.settype <datatype> <variable> - changes the type of variable - [.stp]
     d,var.addsetitem <variable> <object> - adds object to variable - [.asi]

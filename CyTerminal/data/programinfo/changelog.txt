@@ -1,8 +1,6 @@
-Version 0.2 - Changelog:
-Added dictionary support to "d,var" commands
-Added command "d,var.adddictitem"
-Added subcategory "d,file"
-Added command "d,file.read"
-Added command "d,file.write"
-Added command "d,file.delete"
-Added command "d,file.readtovar"
+Version 0.3 - Changelog:
+Added infinite variable support
+m.add, m.multiply, m.subtract, m.divide and m.exponentiate now support
+infinite arguments
+Added auto type to d,var.set for freedom
+Added commands g.freeecho and m.round

@@ -1,7 +1,8 @@
-CyTerminal 0.2
+CyTerminal 0.3
 
 Files and folders:
-Main program: program.py
+Main program: cyterminal.py
 Data for program: data
 Files for g.help: data/cmdinfo
+User made files: data/usermadefiles
 ---

@@ -14,9 +14,11 @@ Syntax
         Tuple: <Tupleitem1> (tupleitem2) (tupleitem3) ... 
         Set: <Seteitem1> (setitem2) (setitem3) ... 
         Dictionary: <Key 1> <Key 1 value>
+        Automatic: <Newval>
 Function
-    gives the variable (which can be v1, v2, v3 or all) a new value (newval) as a datatype which
+    gives the variable a new value (newval) as a datatype which
     can be str (string) or int (integer) or flt (float) or lst (list)
-    or tpl (tuple) or set a new value
+    or tpl (tuple) or set or dict (dictionary) or auto (Automatically
+    assigns type) a new value
 Subcommands
     /none

@@ -12,3 +12,4 @@ Command list
     like tnsec(10s), twnsec(20s), hlmin(30s), min(1m) and fimin(5m) - [tmr]
     g.version - gives the program version - [.ver]
     g.changelog - gives the program changelog - [.chlg]
+    g.freeecho <input> - says input as plain text - [.fech]
