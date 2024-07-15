@@ -1,0 +1,21 @@
+Data (Category)
+Info
+    prefix: d.
+    This command category is for data related commands, commands from this category
+    are related to data handling in some way or another like variable management
+Command list
+    d,var.set <datatype> <variable> <newval> - gives variable a new 
+    value (newval) as datatype which can be str (string) or int (integer) or flt (float) or lst (list)
+    or something else a new value - [.st]
+    d,var.display <variable> - displays variable - [.dsp]
+    d,var.type <variable> - displays the type of variable - [.dsp]
+    d,var.append <variable> <object> - adds object to variable - [.apd]
+    d,var.compare <variable1> <variable2> - compares variable1 and variable 2 - [.cmp]
+    d,var.len <variable> - gives the number of items in variable - [.ln]
+    d,var.settype <datatype> <variable> - changes the type of variable - [.stp]
+    d,var.addsetitem <variable> <object> - adds object to variable - [.asi]
+    d,var.adddictitem <variable> <key> <value> - adds a dictionary item to a variable - [.adi]
+    d,file.read <file> - reads file [.r]
+    d,file.write <file> <contents> - overwrites file - [.w]
+    d,file.delete <file> - deletes file - [.d]
+    d,file.readtovar <variable> <file> - makes the value of variable become file - [.rtv]

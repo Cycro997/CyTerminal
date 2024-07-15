@@ -1,0 +1,11 @@
+l.nor (Command)
+Info
+    prefix: no
+    argument count: 2 required
+    category: Logic
+Syntax
+    l.nor <l> <r>
+Function
+    Performs logical nor
+Subcommands
+    /none

@@ -1,0 +1,11 @@
+l.and (Command)
+Info
+    prefix: a
+    argument count: 2 required
+    category: Logic
+Syntax
+    l.and <l> <r>
+Function
+    Performs logical and
+Subcommands
+    /none
