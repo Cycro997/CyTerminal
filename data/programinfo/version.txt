@@ -1,0 +1,4 @@
+Version 0.6
+Development stage: Alpha
+Release data: 15/07/2024
+---------------

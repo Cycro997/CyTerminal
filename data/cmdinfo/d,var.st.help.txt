@@ -1,0 +1,23 @@
+d,var.set (Command)
+Info
+    prefix: st
+    argument count: 3 required
+    category: Data
+    subcategory: var
+Syntax
+    d,var.set <datatype> <variable> <newval>
+    <newval> Syntax
+        Integer: <Number>
+        Float: <Number>
+        String: <String>
+        List: <ListItem1> (ListItem2) (ListItem3) ...
+        Tuple: <TupleItem1> (TupleItem2) (TupleItem3) ...
+        Set: <SetItem1> (SetItem2) (SetItem3) ...
+        Dictionary: <Key1> <Key1Value>
+        Automatic: <Newval>
+Function
+    gives the variable a new value (newval) as a datatype which
+    can be str (string) or int (integer) or flt (float) or lst (list)
+    or tpl (tuple) or set or dict (dictionary) a new value
+Subcommands
+    /none

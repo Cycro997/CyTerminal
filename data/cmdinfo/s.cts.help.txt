@@ -1,0 +1,11 @@
+s.ctscr (Command)
+Info
+    prefix: cts
+    argument count: 1 required
+    category: Script
+Syntax
+    s.ctscr <script>
+Function
+    Runs a CTScript script
+Subcommands
+    /none

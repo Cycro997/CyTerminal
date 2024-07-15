@@ -1,0 +1,11 @@
+l.not (Command)
+Info
+    prefix: n
+    argument count: 1 required
+    category: Logic
+Syntax
+    l.not <l>
+Function
+    Performs logical not
+Subcommands
+    /none

@@ -1,0 +1,27 @@
+g.datetime (Command)
+Info
+    prefix: dt
+    argument count: 1 optional
+    category: General
+Syntax
+    g.datetime (format)
+Function
+    Returns the current datetime, (format) decides which part to return.
+    (format) values:
+        +c - current century
+        +y - current year (short)
+        #y - current year (long)
+        'mon - current month name (short)
+        "mon - current month name (long)
+        +mons - current month number
+        'wd - current weekday name (short)
+        "wd - current weekday name (long)
+        +wd - current weekday number
+        +d - current day number of the year
+        'am - AM/PM
+        +h - current hour (1-12)
+        #h - current hour
+        +min - current minute
+        +s - current second
+Subcommands
+    /none

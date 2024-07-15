@@ -1,0 +1,12 @@
+d,var.len (Command)
+Info
+    prefix: ln
+    argument count: 1 required
+    category: Data
+    subcategory: var
+Syntax
+    d,var.len <variable>
+Function
+    gives the number of items in the variable given by the user
+Subcommands
+    /none

@@ -1,0 +1,11 @@
+m.fibonacci (Command)
+Info
+    prefix: fib
+    argument count: 1 required
+    category: Math
+Syntax
+    m.fibonacci <number>
+Function
+    Gets the fibonacci series up to <number>
+Subcommands
+    /none

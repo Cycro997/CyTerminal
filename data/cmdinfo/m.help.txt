@@ -1,0 +1,20 @@
+Math (Category)
+Info
+    prefix: m.
+    This command category is for math related commands, commands from this category
+    are math operations or functions like addition and exponentiation
+Command list
+    m.add <num1> <num2> (num...) - adds num1, num2 and num3 - [.ad]
+        m.ad.succeed <num> - gives the successor to num (integer only)
+    m.multiply <num1> <num2> (num...) - multiplies num1, num2 and num3 - [.mu]
+        m.mu.double <num> - doubles num
+    m.subtract <num1> <num2> (num...) - subtracts num1, num2 and num3 - [.su]
+        m.su.precede <num> - gives the predecessor to num (integer only)
+    m.divide <num1> <num2> (num...) - divides num1, num2 and num3 - [.di]
+        m.di.half <num> - halves num
+    m.exponentiate <num1> <num2> (num...) - exponentiates num1, num2 and num3 [.ex]
+        m.ex.square <num> - squares num
+    m.random <min> <max> - returns a random integer between min and max [.ran]
+    m.round <number> <tnrst> - returns number rounded to the nearest tnrst - [.rnd]
+    m.deldecimalpoint <num> - Removes the decimal point from num - [.ddp]
+    m.fibonacci <number> - Gets the fibonacci series up to number - [.fib]

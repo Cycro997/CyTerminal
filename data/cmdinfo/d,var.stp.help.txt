@@ -1,0 +1,12 @@
+d,var.settype (Command)
+Info
+    prefix: stp
+    argument count: 2 required
+    category: Data
+    subcategory: var
+Syntax
+    d,var.stp <datatype> <variable>
+Function
+    Changes the type of the variable given by the user
+Subcommands
+    /none

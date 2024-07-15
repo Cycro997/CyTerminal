@@ -1,0 +1,7 @@
+Script (Category)
+Info
+    prefix: s.
+    This command category is for scripting commands, commands from this category
+    are related to scripting in some way or another like using CTScript
+Command list
+    s.ctscr <script> - runs script as a ctscript script - [.cts]

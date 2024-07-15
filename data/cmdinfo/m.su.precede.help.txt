@@ -1,0 +1,10 @@
+m.su.precede
+Info
+    argument count: 1 required
+    category: Math
+    parent command: m.subtract
+    command run: m.subtract <num> 1
+Syntax
+    m.su.precede <num>
+Function
+    Gives the number before the integer given by the user

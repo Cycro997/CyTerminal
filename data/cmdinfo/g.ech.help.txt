@@ -1,0 +1,11 @@
+g.echo (Command)
+Info
+    prefix: ech
+    argument count: 1 required
+    category: General
+Syntax
+    g.echo <text>
+Function
+    Says the given text input
+Subcommands
+    /none

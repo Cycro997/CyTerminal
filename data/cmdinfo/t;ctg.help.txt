@@ -1,0 +1,12 @@
+Categories (Type)
+Info
+    A command category is a category that contains a list of commands which perform a similar
+    function.
+    Categories have a set prefix which is used before the names of its commands with
+    the command name and prefix being separated by the point (.) and its subcategories
+    being separated by the comma (,)
+List
+    General - A category with commands that perform general functions like exiting the program - [g]
+    Math - A category with commands that perform math related functions like addition
+    Data - A category with commands that perform data related functions like setting variables
+    Logic - A category with commands that perform logical functions like OR

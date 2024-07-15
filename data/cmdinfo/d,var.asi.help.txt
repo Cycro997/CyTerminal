@@ -1,0 +1,12 @@
+d,var.addsetitem (Command)
+Info
+    prefix: asi
+    argument count: 2 required
+    category: Data
+    subcategory: var
+Syntax
+    d,var.addsetitem <variable> <object>
+Function
+    adds a new item given by the user to a variable also given by the user
+Subcommands
+    /none

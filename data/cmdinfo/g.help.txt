@@ -1,0 +1,16 @@
+General (Category)
+Info
+    prefix: g.
+    This command category is for general commands, commands from this category
+    can be very different from eachother
+Command list
+    g.help (category/command/subcommand/type) - shows a list of commands if without arguments and shows info about
+    the specified category or command or subcommand or type if there is an argument - [.hlp]
+    g.exit - exits the program - [.ext]
+    g.echo <text> - says text - [.ech]
+    g.timer <time> <message> - begins a timer, time can be a floating point below 450 (7:30min) or some strings
+    like tnsec(10s), twnsec(20s), hlmin(30s), min(1m) and fimin(5m) - [tmr]
+    g.version - gives the program version - [.ver]
+    g.changelog - gives the program changelog - [.chlg]
+    g.gui - enabled gui mode - [.g]
+    g.datetime (format) - gets the date time - [.dt]

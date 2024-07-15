@@ -1,0 +1,10 @@
+m.ad.succeed
+Info
+    argument count: 1 required
+    category: Math
+    parent command: m.add
+    command run: m.add 1 <num>
+Syntax
+    m.ad.succeed <num>
+Function
+    Gives the number after the integer given by the user

@@ -1,0 +1,11 @@
+l.nand (Command)
+Info
+    prefix: na
+    argument count: 2 required
+    category: Logic
+Syntax
+    l.nand <l> <r>
+Function
+    Performs logical nand
+Subcommands
+    /none

@@ -1,0 +1,15 @@
+g.timer (Command)
+Info
+    prefix: tmr
+    argument count: 1 required, 1 optional
+    category: General
+Syntax
+    g.timer <time> (text)
+Function
+    Begins a timer for an amount of time given by the user and says
+    text given by the user when done (if no text is put, it'll says
+    time's up).
+    The time can be a floating point below 450 (7:30min) or some strings
+    like tnsec(10s), twnsec(20s), hlmin(30s), min(1m) and fimin(5mn)
+Subcommands
+    /none

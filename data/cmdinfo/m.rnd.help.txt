@@ -1,0 +1,11 @@
+m.round (Command)
+Info
+    prefix: rnd
+    argument count: 1 required, 1 optional
+    category: Math
+Syntax
+    m.round <number> <tnrst>
+Function
+    Rounds the number given by the user to the nearest number also given by the user
+Subcommands
+    /none

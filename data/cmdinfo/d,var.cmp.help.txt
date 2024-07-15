@@ -1,0 +1,12 @@
+d,var.compare (Command)
+Info
+    prefix: cmp
+    argument count: 3 required
+    category: Data
+    subcategory: var
+Syntax
+    d,var.compare <variable1> <variable2>
+Function
+    compares 2 variables given by the user
+Subcommands
+    /none

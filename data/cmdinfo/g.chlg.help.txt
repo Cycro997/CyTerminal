@@ -1,0 +1,11 @@
+g.changelog (Command)
+Info
+    prefix: chlg
+    argument count: 0
+    category: General
+Syntax
+    g.changelog
+Function
+    Used for getting the changelog
+Subcommands
+    /none

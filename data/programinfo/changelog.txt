@@ -1,0 +1,12 @@
+Version 0.6 - Changelog
+Added using commands by their prefix
+Renamed d,file.readtovar to d,file.writetovar 
+Added the Script category
+Moved g.ctscr to the script category
+Added commands g.gui, g.datetime and l.binary
+Added logging
+Added settings with options {log, autogui}
+Added command m.fibonacci
+Deleted command g.freeecho for safety purposes
+'auto' is no longer a valid d,var.set datatype for safety purposes
+Completely rewrote all variable handling commands for safety purposes

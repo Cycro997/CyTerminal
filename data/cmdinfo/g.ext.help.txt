@@ -1,0 +1,11 @@
+g.exit (Command)
+Info
+    prefix: ext
+    argument count: 0
+    category: General
+Syntax
+    g.exit
+Function
+    Used for exiting the program
+Subcommands
+    /none

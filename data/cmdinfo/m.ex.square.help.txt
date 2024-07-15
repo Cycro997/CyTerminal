@@ -1,0 +1,10 @@
+m.ex.square
+Info
+    argument count: 1 required
+    category: Math
+    parent command: m.exponentiate
+    command run: m.exponentiate.half <num> 2
+Syntax
+    m.ex.square <num>
+Function
+    Squqres the number given by the user

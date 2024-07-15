@@ -1,0 +1,11 @@
+l.binary (Command)
+Info
+    prefix: b2
+    argument count: 1 required
+    category: Logic
+Syntax
+    l.binary <b10>
+Function
+    Converts <b10> to base 2
+Subcommands
+    /none
