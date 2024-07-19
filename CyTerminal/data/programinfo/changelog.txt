@@ -1,8 +1,0 @@
-Version 0.5 - Changelog
-Added command m.deldecimalpoint
-Split file into multiple modules
-Added category l
-Added commands l.not, l.and, l.nand, l.or, l.nor, l.xor and l.xnor
-Removed remnant of Statement commands in g.help
-Fixed bug where 'g.help m.deldecimalpoint' does not print the contents of the file
-Added commands l.is and l.nis
